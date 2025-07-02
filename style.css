@@ -1,0 +1,137 @@
+:root {
+  --bg-light: #f4f6f9;
+  --bg-dark: #0d1117;
+  --text-light: #111;
+  --text-dark: #c9d1d9;
+  --accent: #3b82f6;
+  --accent-dark: #2563eb;
+  --transition: 0.4s ease;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: var(--transition);
+}
+
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+header {
+  background-color: var(--accent);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+  position: relative;
+}
+
+#themeToggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: white;
+  color: var(--accent);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+h1, h2, h3 {
+  margin: 0.5rem 0;
+}
+
+.skill-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  list-style: none;
+  padding: 0;
+  gap: 1rem;
+  text-align: center;
+}
+
+.skill-list li {
+  background: rgba(59, 130, 246, 0.1);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.skill-list li:hover {
+  transform: scale(1.05);
+}
+
+.project {
+  background-color: rgba(59, 130, 246, 0.05);
+  padding: 1.2rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.resume-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--accent);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  text-decoration: none;
+  border-radius: 2rem;
+  transition: var(--transition);
+}
+
+.resume-button:hover {
+  background: var(--accent-dark);
+}
+
+footer {
+  text-align: center;
+  background: #111;
+  color: white;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+/* Fade-in animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+.delay-5 { animation-delay: 1s; }
+.delay-6 { animation-delay: 1.2s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
